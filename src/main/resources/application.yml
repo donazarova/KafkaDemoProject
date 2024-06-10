@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: kafka
+  kafka:
+    topic: message-topic
+    producer:
+      bootstrap-servers: "http://localhost:9092"
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "com.kafkademo.kafka.serde.KafkaSerializer"
+    consumer:
+      group-id: "message-id"
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "com.kafkademo.kafka.serde.KafkaDeserializer"
+      autoOffsetReset: "earliest"
+
+server:
+  port: 8181
+
+

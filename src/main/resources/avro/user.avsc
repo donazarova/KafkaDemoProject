@@ -1,0 +1,31 @@
+{
+    "namespace": "com.kafka",
+    "type": "record",
+    "name": "User",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "firstName",
+            "type": "string"
+        },
+        {
+            "name": "lastName",
+            "type": "string"
+        },
+        {
+            "name": "age",
+            "type": "int"
+        },
+        {
+            "name": "email",
+            "type": "string"
+        },
+        {
+            "name": "phoneNumber",
+            "type": "int",
+            "default": ""    //znaci deka ova pole e optional
+        }
+}
